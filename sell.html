@@ -3,232 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selling Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #525252;
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            padding: 30px;
-            border: 2px solid #000;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: white;
-        }
-
-        .submit-btn {
-            width: 20%;
-            padding: 10px;
-            font-size: 14px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-            display: block;
-            margin: 15px auto;
-        }
-
-        .submit-btn:hover {
-            background-color: #0056b3;
-        }
-
-        .error {
-            color: red;
-            font-size: 12px;
-        }
-
-        #pdfList {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 20px;
-            }
-
-            .submit-btn {
-                width: 30%;
-            }
-        }
-    </style>
+    <title>Sell on Quickdealzz</title>
+    <link rel="stylesheet" href="sell.css">
 </head>
 <body>
+    <header class="nav-bar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Quickdealzz">
+        </div>
+        <input type="text" class="search-bar" placeholder="Search for products, brands and more">
+        <div class="nav-buttons">
+            <button class="login" onclick="location.href='login.html'">Login</button>
+            <button class="signup" onclick="location.href='signup.html'">Sign Up</button>
+            <button class="sell active" onclick="location.href='sell.html'">Sell</button>
+        </div>
+    </header>
+    
+    <nav class="categories">
+        <a href="electronics.html">Electronics</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="furniture.html">Furniture</a>
+        <a href="vehicles.html">Vehicles</a>
+        <a href="sports.html">Sports</a>
+        <a href="books.html">Books</a>
+    </nav>
 
-<div class="container">
-    <h2>Selling Product Form</h2>
+    <section class="sell-form">
+        <h2>Sell Your Product</h2>
+        <form action="submit_listing.php" method="post" enctype="multipart/form-data">
+            <label for="product-title">Product Title:</label>
+            <input type="text" id="product-title" name="product-title" required>
 
-    <div class="form-group">
-        <label for="category">Category:</label>
-        <select id="category" required>
-            <option value="">Select Category</option>
-            <option value="electronics">Electronics</option>
-            <option value="furniture">Furniture</option>
-            <option value="vehicles">Vehicles</option>
-        </select>
-        <span class="error" id="categoryError"></span>
-    </div>
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="furniture">Furniture</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="sports">Sports</option>
+                <option value="books">Books</option>
+            </select>
 
-    <div class="form-group">
-        <label for="itemName">Item Name:</label>
-        <input type="text" id="itemName" placeholder="Enter the item name" required>
-        <span class="error" id="itemNameError"></span>
-    </div>
+            <label for="price">Price (₹):</label>
+            <input type="number" id="price" name="price" required>
 
-    <div class="form-group">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" required>
-        <span class="error" id="nameError"></span>
-    </div>
+            <label for="condition">Condition:</label>
+            <select id="condition" name="condition" required>
+                <option value="new">New</option>
+                <option value="used">Used</option>
+                <option value="old">Old</option>
+            </select>
 
-    <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" required>
-        <span class="error" id="phoneError"></span>
-    </div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
 
-    <div class="form-group">
-        <label for="address">Address:</label>
-        <input type="text" id="address" required>
-        <span class="error" id="addressError"></span>
-    </div>
+            <label for="images">Upload Images:</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple required>
 
-    <div class="form-group">
-        <label for="purchaseDate">Date of Purchase:</label>
-        <input type="date" id="purchaseDate" required>
-        <span class="error" id="purchaseDateError"></span>
-    </div>
+            <button type="submit" class="submit-btn">Post Listing</button>
+        </form>
+    </section>
 
-    <div class="form-group">
-        <label for="currency">Select Currency:</label>
-        <select id="currency" onchange="updateCurrency()" required>
-            <option value="">Select Currency</option>
-            <option value="USD">USD - US Dollar</option>
-            <option value="EUR">EUR - Euro</option>
-            <option value="INR">INR - Indian Rupee</option>
-            <option value="GBP">GBP - British Pound</option>
-            <option value="JPY">JPY - Japanese Yen</option>
-            <option value="CAD">CAD - Canadian Dollar</option>
-            <option value="AUD">AUD - Australian Dollar</option>
-            <option value="custom">Other (Enter Manually)</option>
-        </select>
-        <span class="error" id="currencyError"></span>
-    </div>
-
-    <div class="form-group" id="customCurrencyGroup" style="display: none;">
-        <label for="customCurrency">Enter Custom Currency:</label>
-        <input type="text" id="customCurrency" oninput="updateCurrency()">
-    </div>
-
-    <div class="form-group">
-        <label for="price">Expected Price (<span id="selectedCurrency"></span>):</label>
-        <input type="number" id="price" disabled required>
-        <span class="error" id="priceError"></span>
-    </div>
-    <div class="form-group">
-        <label for="negotiable">Is the price negotiable?</label>
-        <select id="negotiable" onchange="toggleNegotiableAmount()">
-            <option value="">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-
-    <div class="form-group" id="negotiableAmountGroup" style="display: none;">
-        <label for="negotiableAmount">Enter Negotiable Amount:</label>
-        <input type="number" id="negotiableAmount">
-    </div>
-
-    <div class="form-group">
-        <label for="productDocs">Upload Product Documents (Multiple PDFs Allowed):</label>
-        <input type="file" id="productDocs" accept=".pdf" multiple>
-        <div id="pdfList"></div>
-    </div>
-
-    <button class="submit-btn" onclick="validateForm(event)">Submit</button>
-</div>
-
-<script>
-    function updateCurrency() {
-        const currency = document.getElementById('currency').value;
-        const customCurrencyInput = document.getElementById('customCurrency');
-        const customCurrencyGroup = document.getElementById('customCurrencyGroup');
-        const selectedCurrencyText = document.getElementById('selectedCurrency');
-        const priceInput = document.getElementById('price');
-
-        if (currency === 'custom') {
-            customCurrencyGroup.style.display = 'block';
-            selectedCurrencyText.innerText = customCurrencyInput.value;
-            customCurrencyInput.addEventListener('input', () => {
-                selectedCurrencyText.innerText = customCurrencyInput.value;
-                priceInput.disabled = !customCurrencyInput.value.trim();
-            });
-        } else {
-            customCurrencyGroup.style.display = 'none';
-            selectedCurrencyText.innerText = currency;
-            priceInput.disabled = !currency;
-        }
-    }
-
-    function validateForm(event) {
-        let isValid = true;
-        document.querySelectorAll('input, select').forEach(input => {
-            if (input.value.trim() === '' && input.hasAttribute('required')) {
-                isValid = false;
-                input.nextElementSibling.textContent = "This field is required";
-            } else {
-                input.nextElementSibling.textContent = "";
-            }
-        });
-
-        if (!isValid) {
-            event.preventDefault();
-        }
-    }
-
-    document.getElementById('productDocs').addEventListener('change', function(event) {
-        const fileList = document.getElementById('pdfList');
-        fileList.innerHTML = '';
-        [...this.files].forEach(file => {
-            const listItem = document.createElement('p');
-            listItem.textContent = file.name;
-            fileList.appendChild(listItem);
-        });
-    });
-</script>
-
+    <footer>
+        <p>&copy; 2025 Quickdealzz. All rights reserved.</p>
+    </footer>
 </body>
 </html>

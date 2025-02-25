@@ -1,92 +1,197 @@
-body{
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f6;
+}
 
-}
-.nav-bar{
-    width:100%;
-    height:80px;
-    background-color:rgb(188, 219, 184);
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-}
-.image img{
-    width: 100px;
-    cursor: pointer;
-}
-.search-bar{
-    width:40%;
-    height: fit-content;
-    padding:20px 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: medium;
-    cursor: pointer;
-}
-.sell{
-    width:6%;
-    height: 60%;
-    border-radius:4px;
-    border: none;
-    color:blue;
-    font-size:large;
-    background-color: bisque;
-    font-weight: 600;
-    cursor: pointer;
-    transition:0.4s  ease-in;
-}
-.categories{
+
+.nav-bar {
     width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content:flex-start;
-    gap: 20px;
-    background-color: rgb(131, 119, 119);
-}
-.data{
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    gap:100px;
-}
-.data .items{
+    height: 80px;
+    background-color:rgb(188, 219, 184);
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:100px;
-}
-.data p{
-    color: black;
-    font-size: larger;
-    font-weight: 700;
-    margin-left: 10px;
-}
-.data a{
-margin-left: 10px;
-text-decoration: none;
-color:blue;
-font-size:large;
-}
-.recomendation{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: white;
     flex-wrap: wrap;
 }
-.box img{
-    width:70%;
-    border-radius: 20px;
+
+.logo img {
+    width: 120px;
+    cursor: pointer;
 }
-.box{
+
+.search-bar {
+    width: 40%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    position: relative;
+    background: white url('img/search-icon.png') no-repeat right 10px center;
+    background-size: 20px;
+}
+
+.nav-buttons {
     display: flex;
-    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login {
+    background-color: #ff9f00;
+    color: white;
+}
+
+.signup {
+    background-color: #f44336;
+    color: white;
+}
+
+.sell {
+    background-color: #4caf50;
+    color: white;
+}
+
+.login:hover {
+    background-color: #e68a00;
+}
+
+.signup:hover {
+    background-color: #d32f2f;
+}
+
+.sell:hover {
+    background-color: #388e3c;
+}
+
+nav.categories {
+    background-color: white;
+    padding: 10px;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-    width: 400px;
-    height: 400px;
-    background-color: rgb(170, 187, 181);
-    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.categories a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2874f0;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.categories a:hover {
+    color: #ff5722;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Recommendations Section */
+.recommendations {
+    padding: 20px;
+    background-color: white;
     margin: 20px;
+    border-radius: 10px;
+}
+
+.recommendations h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.recommendation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.recommendation {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recommendation:hover {
+    transform: scale(1.05);
+}
+
+.recommendation img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.price {
+    font-weight: bold;
+    color: #388e3c;
+    font-size: 18px;
+}
+
+.discount {
+    color: #ff5722;
+    font-size: 14px;
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+
+.tag.new {
+    background: green;
+}
+
+.tag.used {
+    background: orange;
+}
+
+.tag.old {
+    background: blue;
+}
+marquee {
+    font-size: 18px;
+    color: yellow;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background:  rgb(188, 219, 184);
+    
+    color: black;
+    margin-top: 20px;
 }

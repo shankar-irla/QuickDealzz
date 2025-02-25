@@ -1,59 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuickDealzz Home</title>
-    <link rel="stylesheet" href="home.css" />
-  </head>
-  <body>
-    <div class="nav-bar">
-      <div class="image">
-        <img src="img/logo.png" />
-      </div>
-      <input type="text" placeholder="Search" class="search-bar" />
-      <button class="sell" onclick="window.location.href='sell.html'">Sell</button>
-    </div>
-    <div class="categories">
-      <div class="data">
-        <p>categories</p>
-        <div class="items">
-          <a href="furniture.html">Furniture</a>
-          <a href="Electronics.html">Electronics</a>
-          <a href="vehicles.html">Vehicals</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickdealzz</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header class="nav-bar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Quickdealzz">
         </div>
-      </div>
-    </div>
-    <div>
-      <h1 style="text-align: center; color: rgb(195, 111, 9)">
-        Recommendation
-      </h1>
-    </div>
-    <div class="recomendation">
-      <div class="box">
-        <img src="img/mobile.png" />
-        <h1>Rs:65000</h1>
-      </div>
-      <div class="box">
-        <img src="img/laptop.png" />
-        <h1>Rs:65000</h1>
-      </div>
-      <div class="box">
-        <img src="img/sofa.png" />
-        <h1>Rs:65000</h1>
-      </div>
-      <div class="box">
-        <img src="img/mobile.png" />
-        <h1>Rs:65000</h1>
-      </div>
-      <div class="box">
-        <img src="img/mobile.png" />
-        <h1>Rs:65000</h1>
-      </div>
-      <div class="box">
-        <img src="img/mobile.png">
-        <h1>Rs:65000</h1>
-       </div>
-    </div>
-  </body>
+        <input type="text" class="search-bar" placeholder="Search for products, brands and more">
+        <div class="nav-buttons">
+            <button class="login" onclick="location.href='login.html'">Login</button>
+            <button class="signup" onclick="location.href='signup.html'">Sign Up</button>
+            <button class="sell" onclick="location.href='sell.html'">Sell</button>
+        </div>
+    </header>
+     <marquee scrollamount="12">🔥 Special Offer: Get up to 50% off on selected items! Limited time only! 🔥  🔥 Special Offer: Get up to 50% off on selected items! Limited time only! 🔥 🔥 Special Offer: Get up to 50% off on selected items! Limited time only! 🔥      🔥 Special Offer: Get up to 50% off on selected items! Limited time only! 🔥</marquee>
+    <nav class="categories">
+        <a href="electronics.html">Electronics</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="furniture.html">furniture</a>
+        <a href="vehicles.html">vehicles</a>
+        <a href="sports.html">Sports</a>
+        <a href="books.html">Books</a>
+    </nav>
+
+    <section class="banner">
+        <img src="img/banner.jpg" alt="Sale Banner">
+    </section>
+    <marquee direction="right" scrollamount="12">🚀 New Arrivals Every Day! Check out the latest deals on Quickdealzz! 🚀   🚀 New Arrivals Every Day! Check out the latest deals on Quickdealzz! 🚀   🚀 New Arrivals Every Day! Check out the latest deals on Quickdealzz! 🚀        🚀 New Arrivals Every Day! Check out the latest deals on Quickdealzz! 🚀</marquee>
+    <section class="recommendations">
+        <h2>Recommended Products</h2>
+        <div class="recommendation-list">
+            <div class="recommendation">
+                <span class="tag new">New</span>
+                <img src="img/electronics/iphone.jpg" alt="iPhone">
+                <p class="price">₹79,999</p>
+                <p class="discount">10% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag used">Used 2Y 6M</span>
+                <img src="img/electronics/laptop.png" alt="Laptop">
+                <p class="price">₹54,999</p>
+                <p class="discount">15% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag old">1Y Old</span>
+                <img src="img/electronics/headphone.jpg" alt="Headphones">
+                <p class="price">₹1,999</p>
+                <p class="discount">20% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag new">New</span>
+                <img src="img/electronics/watch.jpg" alt="Smartwatch">
+                <p class="price">₹3,499</p>
+                <p class="discount">25% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag used">Used 3Y</span>
+                <img src="img/electronics/tv.jpg" alt="Smart TV">
+                <p class="price">₹42,999</p>
+                <p class="discount">18% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag old">1Y 6M Old</span>
+                <img src="img/electronics/gaming_console.jpg" alt="Gaming Console">
+                <p class="price">₹34,999</p>
+                <p class="discount">15% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag new">New</span>
+                <img src="img/fashion/shoes.jpg" alt="Shoes">
+                <p class="price">₹2,499</p>
+                <p class="discount">30% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag old">2Y Old</span>
+                <img src="img/electronics/mobile2.png" alt="Smart phone">
+                <p class="price">₹18,999</p>
+                <p class="discount">12% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag used">Used 1Y 3M</span>
+                <img src="img/books/book.jpg" alt="Book">
+                <p class="price">₹399</p>
+                <p class="discount">5% off</p>
+            </div>
+            <div class="recommendation">
+                <span class="tag new">New</span>
+                <img src="img/electronics/camera.jpg" alt="Camera">
+                <p class="price">₹25,999</p>
+                <p class="discount">20% off</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quickdealzz. All rights reserved.</p>
+    </footer>
+</body>
 </html>
