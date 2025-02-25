@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickDealzz Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      height: 100vh;
+      background: url("back.jpg"), black; 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    
+    .welcome-text {
+      position: absolute;
+      top: 40px;              
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      font-size: 5rem;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    
+    .bottom-buttons {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 40px;
+    }
+
+   
+    .bottom-buttons button {
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #f8f7f7; 
+      color: #1a1818;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .bottom-buttons button:hover {
+      background-color: rgba(255,255,255,0.15); 
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    
+    .chat-help {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+
+   
+    .chat-help button {
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 50px; 
+      cursor: pointer;
+      background-color: rgba(255,255,255,0.15);
+      color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .chat-help button:hover {
+      background-color: #fff;
+      color: #1a1818;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="welcome-text">Welcome To</div>
+
+
+  <div class="bottom-buttons">
+    <button onclick="window.location.href='login.html'">Login</button>
+    <button onclick="window.location.href='signup.html'">Sign Up</button>
+  </div>
+
+
+  <div class="chat-help">
+    <button onclick="alert('How can we help you?');">Chat Help</button>
+  </div>
+</body>
+</html>
