@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: rgb(188, 219, 184);
+  
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #ff9900;
+  }
+  
+  .category-banner {
+    background-color: #e7e7e7;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .category-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .category-banner p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Product Card */
+  .product-item {
+    width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .product-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Product Image */
+  .product-item img {
+    width: 100%;
+    height: 180px; /* Set a fixed height */
+    object-fit: contain; /* Ensures image fits well */
+    border-radius: 4px;
+  }
+  
+  /* Product Name */
+  .product-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  /* Condition Tags */
+  .tag {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+  }
+  
+  .tag.new {
+    background-color: #4CAF50;
+  }
+  
+  .tag.used {
+    background-color: #ff9800;
+  }
+  
+  .tag.refurbished {
+    background-color: #3F51B5;
+  }
+  
+  /* Price & Discount */
+  .price {
+    font-size: 1.1rem;
+    color: #D32F2F;
+    margin-bottom: 10px;
+  }
+  
+  .discount {
+    font-size: 1rem;
+    color: #388E3C;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Add to Cart Button */
+  .product-item button {
+    background-color: #232F3E;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ensure full width */
+    margin-top: auto; /* Push to bottom */
+  }
+  
+  .product-item button:hover {
+    background-color: #ff9900;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: rgb(188, 219, 184);
+  
+    color: black;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  

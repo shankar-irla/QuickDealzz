@@ -1,0 +1,131 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b4d4a1;
+    padding: 10px 20px;
+}
+
+.logo img {
+    
+    width: 100px;
+  cursor: pointer;
+}
+
+.search-bar {
+    width: 40%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.nav-buttons button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login {
+    background-color: #ffa500;
+    color: white;
+}
+
+.signup {
+    background-color: #ff3333;
+    color: white;
+}
+
+.sell {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.categories {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+
+.sell-container {
+    
+    width: 70%;
+    margin: 20px auto;
+    background-color: white;
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sell-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sell-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sell-form label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.sell-form input,
+.sell-form select,
+.sell-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sell-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.sell-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sell-form button:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #b4d4a1;
+    margin-top: 20px;
+}
