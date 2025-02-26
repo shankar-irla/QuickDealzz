@@ -98,14 +98,13 @@ nav.categories {
     color: #ff5722;
 }
 
-/* Banner */
+
 .banner img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* Recommendations Section */
 .recommendations {
     padding: 20px;
     background-color: white;
